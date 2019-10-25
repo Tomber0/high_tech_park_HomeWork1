@@ -77,11 +77,31 @@ namespace high_tech_park_HomeWork1
             brickSizeArea[1] = brickSizes[0] * brickSizes[2];
             brickSizeArea[2] = brickSizes[1] * brickSizes[2];
 
-            int holeSizeH, holeSizeV;
-            Console.Out.WriteLine("Введите первую сторону отверстия");
-            holeSizeH = Convert.ToInt32(Console.In.ReadLine());
-            Console.Out.WriteLine("Введите вторую сторону отверстия");
-            holeSizeV = Convert.ToInt32(Console.In.ReadLine());
+            int holeSizeH = 0 , holeSizeV = 0;
+            while (holeSizeH <=0)
+            {
+                Console.Out.WriteLine("Введите первую сторону отверстия");
+                holeSizeH = Convert.ToInt32(Console.In.ReadLine());
+
+                if (holeSizeH <= 0){
+                    Console.Out.WriteLine("Проверьте ввод");
+                    continue;
+                }
+
+            }
+            while (holeSizeV <= 0)
+            {
+                Console.Out.WriteLine("Введите вторую сторону отверстия");
+                holeSizeV = Convert.ToInt32(Console.In.ReadLine());
+
+                if (holeSizeV <= 0)
+                {
+                    Console.Out.WriteLine("Проверьте ввод");
+                    continue;
+                }
+
+            }
+
             //find 2 smallest sides of brick
             //Проверяем на входимость n вместо n^2
 
